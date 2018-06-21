@@ -5,6 +5,7 @@ using System.Text;
 
 using Android.App;
 using Android.Content;
+using Android.Graphics;
 using Android.OS;
 using Android.Runtime;
 using Android.Views;
@@ -12,8 +13,8 @@ using Android.Widget;
 
 namespace ProjectoFinal
 {
-    [Activity(Label = "login")]
-    public class login : Activity
+    [Activity(Label = "Login")]
+    public class Login : Activity
     {
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -21,9 +22,6 @@ namespace ProjectoFinal
 
             // Create your application here
             SetContentView(Resource.Layout.login);
-
-
-
 
         }
 
