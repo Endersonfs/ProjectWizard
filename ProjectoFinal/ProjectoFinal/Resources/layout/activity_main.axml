@@ -1,14 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:minWidth="25px"
     android:minHeight="25px">
-    <EditText
-        android:inputType="textEmailAddress"
+    <ImageView
+        android:src="@mipmap/proto2new"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/editText1" />
-</LinearLayout>
+        android:id="@+id/imageView1"
+        android:layout_height="557.0dp"
+        android:scaleType="centerCrop" />
+    <Button
+        android:text="Next"
+        android:layout_width="fill_parent"
+        android:layout_height="32.5dp"
+        android:id="@+id/button1"
+        android:foreground="?attr/selectableItemBackground"
+        android:background="@android:color/holo_green_light"
+        android:textColor="@color/primary_material_light"
+        android:layout_alignParentBottom="true"
+        android:clickable="true" />
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:minWidth="25px"
+        android:minHeight="25px">
+        <ImageView
+            android:layout_width="match_parent"
+            android:id="@+id/imageView2"
+            android:layout_height="117.0dp"
+            android:layout_alignParentBottom="false"
+            android:layout_alignParentLeft="false"
+            android:layout_alignParentRight="false"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="false"
+            android:layout_marginTop="90dp"
+            android:scaleType="centerInside"
+            android:src="@mipmap/ic_location_on_green_light_48dp" />
+    </RelativeLayout>
+</RelativeLayout>
