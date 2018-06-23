@@ -24,7 +24,7 @@ namespace ProjectoFinal
 
         private void Btn_Click(object sender, EventArgs e)
         {
-            var intent = new Intent(this, typeof(login));
+            var intent = new Intent(this, typeof(Login));
             StartActivity(intent);
         }
     }
