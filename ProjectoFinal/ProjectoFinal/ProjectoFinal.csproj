@@ -58,7 +58,7 @@
     <Reference Include="Mono.Android" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Login.cs" />
+    <Compile Include="login.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Register.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
@@ -123,11 +123,6 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\register.axml">
-      <SubType>Designer</SubType>
-    </AndroidResource>
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\layout\tester.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
