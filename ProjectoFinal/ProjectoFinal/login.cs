@@ -5,6 +5,7 @@ using System.Text;
 
 using Android.App;
 using Android.Content;
+using Android.Graphics;
 using Android.OS;
 using Android.Runtime;
 using Android.Views;
@@ -12,8 +13,8 @@ using Android.Widget;
 
 namespace ProjectoFinal
 {
-    [Activity(Label = "login")]
-    public class login : Activity
+    [Activity(Label = "Login")]
+    public class Login : Activity
     {
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -22,16 +23,11 @@ namespace ProjectoFinal
             // Create your application here
             SetContentView(Resource.Layout.login);
 
+            var btn = FindViewById<Button>(Resource.Id.btnSignup);
+            btn.Click += Btn_Click;
 
-            var btnLogin = FindViewById<Button>(Resource.Id.button1);
-            btnLogin.Click += BtnLogin_Click;  
 
-        }
 
-        private void BtnLogin_Click(object sender, EventArgs e)
-        {
-            var intent = new Intent(this, typeof(CentroActivity));
-            StartActivity(intent);
         }
     }
 }

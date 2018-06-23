@@ -2789,20 +2789,23 @@ namespace ProjectoFinal
 			// aapt resource value: 0x7f080018
 			public const int line3 = 2131230744;
 			
+			// aapt resource value: 0x7f0800c5
+			public const int linearLayout1 = 2131230917;
+			
 			// aapt resource value: 0x7f08001d
 			public const int listMode = 2131230749;
 			
 			// aapt resource value: 0x7f08006e
 			public const int list_item = 2131230830;
 			
-			// aapt resource value: 0x7f0800c7
-			public const int masked = 2131230919;
+			// aapt resource value: 0x7f0800cb
+			public const int masked = 2131230923;
 			
 			// aapt resource value: 0x7f0800b8
 			public const int media_actions = 2131230904;
 			
-			// aapt resource value: 0x7f0800c5
-			public const int message = 2131230917;
+			// aapt resource value: 0x7f0800c9
+			public const int message = 2131230921;
 			
 			// aapt resource value: 0x7f080031
 			public const int middle = 2131230769;
@@ -3011,6 +3014,12 @@ namespace ProjectoFinal
 			// aapt resource value: 0x7f0800ac
 			public const int textInputEditText2 = 2131230892;
 			
+			// aapt resource value: 0x7f0800c6
+			public const int textInputEditText3 = 2131230918;
+			
+			// aapt resource value: 0x7f0800c8
+			public const int textInputEditText4 = 2131230920;
+			
 			// aapt resource value: 0x7f0800a9
 			public const int textInputLayout1 = 2131230889;
 			
@@ -3019,6 +3028,9 @@ namespace ProjectoFinal
 			
 			// aapt resource value: 0x7f0800ad
 			public const int textInputLayout3 = 2131230893;
+			
+			// aapt resource value: 0x7f0800c7
+			public const int textInputLayout4 = 2131230919;
 			
 			// aapt resource value: 0x7f080077
 			public const int textSpacerNoButtons = 2131230839;
@@ -3086,8 +3098,8 @@ namespace ProjectoFinal
 			// aapt resource value: 0x7f080016
 			public const int view_offset_helper = 2131230742;
 			
-			// aapt resource value: 0x7f0800c6
-			public const int visible = 2131230918;
+			// aapt resource value: 0x7f0800ca
+			public const int visible = 2131230922;
 			
 			// aapt resource value: 0x7f08003c
 			public const int withText = 2131230780;
@@ -3326,19 +3338,25 @@ namespace ProjectoFinal
 			public const int notification_template_part_time = 2130968632;
 			
 			// aapt resource value: 0x7f040039
-			public const int select_dialog_item_material = 2130968633;
+			public const int register = 2130968633;
 			
 			// aapt resource value: 0x7f04003a
-			public const int select_dialog_multichoice_material = 2130968634;
+			public const int select_dialog_item_material = 2130968634;
 			
 			// aapt resource value: 0x7f04003b
-			public const int select_dialog_singlechoice_material = 2130968635;
+			public const int select_dialog_multichoice_material = 2130968635;
 			
 			// aapt resource value: 0x7f04003c
-			public const int support_simple_spinner_dropdown_item = 2130968636;
+			public const int select_dialog_singlechoice_material = 2130968636;
 			
 			// aapt resource value: 0x7f04003d
-			public const int tooltip = 2130968637;
+			public const int support_simple_spinner_dropdown_item = 2130968637;
+			
+			// aapt resource value: 0x7f04003e
+			public const int tester = 2130968638;
+			
+			// aapt resource value: 0x7f04003f
+			public const int tooltip = 2130968639;
 			
 			static Layout()
 			{
