@@ -24,8 +24,6 @@ namespace ProjectoFinal
             SetContentView(Resource.Layout.login);
 
             var btn = FindViewById<Button>(Resource.Id.btnSignup);
-            btn.Click += Btn_Click;
-
 
 
         }
