@@ -59,9 +59,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CentroActivity.cs" />
+    <Compile Include="HomeFragment.cs" />
     <Compile Include="login.cs" />
     <Compile Include="MainActivity.cs" />
-    <Compile Include="navbar.cs" />
+    <Compile Include="MenuActivity.cs" />
     <Compile Include="Register.cs" />
     <Compile Include="Resources\Fragments\FragmentAdd.cs" />
     <Compile Include="Resources\Fragments\FragmentHome.cs" />
@@ -112,6 +113,9 @@
     <PackageReference Include="Xamarin.Android.Support.v4">
       <Version>27.0.2.1</Version>
     </PackageReference>
+    <PackageReference Include="Xamarin.Android.Support.v7.AppCompat">
+      <Version>27.0.2.1</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\mipmap-hdpi\proto2.jpg" />
@@ -126,9 +130,6 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\mipmap-hdpi\proto2new.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_person_outline_green_light_18dp.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\ic_person_outline_green_light_18dp.xml" />
@@ -302,15 +303,6 @@
     <AndroidResource Include="Resources\drawable-hdpi\ic_search.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable-hdpi\ic_shopping_cart.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable-hdpi\ic_store.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable-hdpi\ic_truck.png" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\drawable-mdpi\ic_file_document.png" />
   </ItemGroup>
   <ItemGroup>
@@ -321,15 +313,6 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable-mdpi\ic_search.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable-mdpi\ic_shopping_cart.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable-mdpi\ic_store.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable-mdpi\ic_truck.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable-xhdpi\ic_file_document.png" />
@@ -344,15 +327,6 @@
     <AndroidResource Include="Resources\drawable-xhdpi\ic_search.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable-xhdpi\ic_shopping_cart.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable-xhdpi\ic_store.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable-xhdpi\ic_truck.png" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\drawable-xxhdpi\ic_file_document.png" />
   </ItemGroup>
   <ItemGroup>
@@ -365,21 +339,61 @@
     <AndroidResource Include="Resources\drawable-xxhdpi\ic_search.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable-xxhdpi\ic_shopping_cart.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable-xxhdpi\ic_store.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable-xxhdpi\ic_truck.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\menu\nav_menu.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\layout\navigation.axml">
+    <AndroidResource Include="Resources\layout\Maine.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\app_bar.axml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\headerdrawerlayout.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\homeLayout.axml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\menu\action_menu.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\menu\navmenu.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\ic_action_attach.png" />
+    <AndroidResource Include="Resources\drawable\ic_action_refresh.png" />
+    <AndroidResource Include="Resources\drawable\ic_devices_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_home_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_question_answer_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_supervisor_account_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable\imgBg.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_person_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_person_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_person_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_person_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_person_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_book_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_book_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_book_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_book_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_book_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_settings_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_settings_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_settings_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_settings_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_settings_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_help_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_help_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_help_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_help_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_help_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_input_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_input_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_input_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_input_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_input_black_24dp.png" />
+    <Content Include="values-v21\Styles.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

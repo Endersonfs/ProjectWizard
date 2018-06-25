@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+  <group android:checkableBehavior="single">
+    <item
+      android:id="@+id/nav_perfil"
+      android:icon="@drawable/ic_person_black_24dp"
+      android:title="Mi perfil" />
+    <item
+      android:id="@+id/nav_libros"
+      android:icon="@drawable/ic_book_black_24dp"
+      android:title="Mis libros" />
+    <item
+      android:id="@+id/nav_configuracion"
+      android:icon="@drawable/ic_settings_black_24dp"
+      android:title="Configuracion" />
+    <item
+      android:id="@+id/nav_Ayuda"
+      android:icon="@drawable/ic_help_black_24dp"
+      android:title="Ayuda" />
+   <item
+      android:id="@+id/nav_logout"
+      android:icon="@drawable/ic_input_black_24dp"
+      android:title="Cerrar session" />
+  </group> 
+</menu>
