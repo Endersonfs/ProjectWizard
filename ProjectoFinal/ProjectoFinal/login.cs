@@ -41,7 +41,7 @@ namespace ProjectoFinal
 
         private void Btnregister_Click(object sender, EventArgs e)
         {
-            var intent = new Intent(this, typeof(MenuActivity));
+            var intent = new Intent(this, typeof(Register));
             StartActivity(intent);
         }
     }

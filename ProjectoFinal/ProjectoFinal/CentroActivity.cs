@@ -4,10 +4,8 @@ using Android.Views;
 using Android.Support.Design.Widget;
 using ProjectoFinal.Resources.Fragments;
 using Android.Support.V7.App;
-using Android.Views;
 using Android.Widget;
 using Android.Support.V7.Widget;
-using NavigationDrawer;
 using Android.Support.V4.Widget;
 
 namespace ProjectoFinal
@@ -40,7 +38,9 @@ namespace ProjectoFinal
 
             // Create ActionBarDrawerToggle button and add it to the toolbar
             var drawerToggle = new ActionBarDrawerToggle(this, drawerLayouts, toolbar, Resource.String.open_drawer, Resource.String.close_drawer);
+#pragma warning disable CS0618 // El tipo o el miembro están obsoletos
             drawerLayouts.SetDrawerListener(drawerToggle);
+#pragma warning restore CS0618 // El tipo o el miembro están obsoletos
             drawerToggle.SyncState();
         }
 

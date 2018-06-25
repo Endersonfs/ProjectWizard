@@ -59,10 +59,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CentroActivity.cs" />
-    <Compile Include="HomeFragment.cs" />
     <Compile Include="login.cs" />
     <Compile Include="MainActivity.cs" />
-    <Compile Include="MenuActivity.cs" />
     <Compile Include="Register.cs" />
     <Compile Include="Resources\Fragments\FragmentAdd.cs" />
     <Compile Include="Resources\Fragments\FragmentHome.cs" />
@@ -352,9 +350,6 @@
     </AndroidResource>
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\layout\homeLayout.axml" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\menu\action_menu.xml" />
   </ItemGroup>
   <ItemGroup>
@@ -393,6 +388,12 @@
     <AndroidResource Include="Resources\drawable-xhdpi\ic_input_black_24dp.png" />
     <AndroidResource Include="Resources\drawable-xxhdpi\ic_input_black_24dp.png" />
     <AndroidResource Include="Resources\drawable-xxxhdpi\ic_input_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_add_white_18dp.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_add_white_18dp.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_add_white_18dp.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_add_white_18dp.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_add_white_18dp.png" />
+    <AndroidResource Include="Resources\values\dimens.xml" />
     <Content Include="values-v21\Styles.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
