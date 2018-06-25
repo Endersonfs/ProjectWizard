@@ -2594,8 +2594,8 @@ namespace ProjectoFinal
 			// aapt resource value: 0x7f080034
 			public const int FUNCTION = 2131230772;
 			
-			// aapt resource value: 0x7f0800b9
-			public const int HomeFrameLayout = 2131230905;
+			// aapt resource value: 0x7f0800ba
+			public const int HomeFrameLayout = 2131230906;
 			
 			// aapt resource value: 0x7f080035
 			public const int META = 2131230773;
@@ -2672,8 +2672,8 @@ namespace ProjectoFinal
 			// aapt resource value: 0x7f08006a
 			public const int activity_chooser_view_content = 2131230826;
 			
-			// aapt resource value: 0x7f0800b4
-			public const int activity_main = 2131230900;
+			// aapt resource value: 0x7f0800b6
+			public const int activity_main = 2131230902;
 			
 			// aapt resource value: 0x7f080027
 			public const int add = 2131230759;
@@ -2708,8 +2708,8 @@ namespace ProjectoFinal
 			// aapt resource value: 0x7f08003d
 			public const int bottom = 2131230781;
 			
-			// aapt resource value: 0x7f0800b6
-			public const int bottom_navigation = 2131230902;
+			// aapt resource value: 0x7f0800b8
+			public const int bottom_navigation = 2131230904;
 			
 			// aapt resource value: 0x7f0800b1
 			public const int btnLogin = 2131230897;
@@ -2762,8 +2762,8 @@ namespace ProjectoFinal
 			// aapt resource value: 0x7f080073
 			public const int contentPanel = 2131230835;
 			
-			// aapt resource value: 0x7f0800b5
-			public const int content_frame = 2131230901;
+			// aapt resource value: 0x7f0800b7
+			public const int content_frame = 2131230903;
 			
 			// aapt resource value: 0x7f08009f
 			public const int coordinator = 2131230879;
@@ -2804,8 +2804,8 @@ namespace ProjectoFinal
 			// aapt resource value: 0x7f080020
 			public const int disableHome = 2131230752;
 			
-			// aapt resource value: 0x7f0800b7
-			public const int drawer_layout = 2131230903;
+			// aapt resource value: 0x7f0800b4
+			public const int drawer_layout = 2131230900;
 			
 			// aapt resource value: 0x7f08008b
 			public const int edit_query = 2131230859;
@@ -2891,8 +2891,8 @@ namespace ProjectoFinal
 			// aapt resource value: 0x7f08009d
 			public const int largeLabel = 2131230877;
 			
-			// aapt resource value: 0x7f0800b8
-			public const int layout_main = 2131230904;
+			// aapt resource value: 0x7f0800b5
+			public const int layout_main = 2131230901;
 			
 			// aapt resource value: 0x7f080049
 			public const int left = 2131230793;
@@ -2960,8 +2960,8 @@ namespace ProjectoFinal
 			// aapt resource value: 0x7f0800db
 			public const int nav_perfil = 2131230939;
 			
-			// aapt resource value: 0x7f0800ba
-			public const int nav_view = 2131230906;
+			// aapt resource value: 0x7f0800b9
+			public const int nav_view = 2131230905;
 			
 			// aapt resource value: 0x7f0800a4
 			public const int navigation_header_container = 2131230884;
@@ -3464,7 +3464,7 @@ namespace ProjectoFinal
 			public const int main = 2130968625;
 			
 			// aapt resource value: 0x7f040032
-			public const int Maine = 2130968626;
+			public const int Maine2 = 2130968626;
 			
 			// aapt resource value: 0x7f040033
 			public const int notification_action = 2130968627;

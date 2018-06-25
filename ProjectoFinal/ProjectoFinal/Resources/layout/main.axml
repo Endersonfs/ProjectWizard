@@ -4,25 +4,48 @@
     android:id="@+id/main_content"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <RelativeLayout
-        android:id="@+id/activity_main"
+    <android.support.v4.widget.DrawerLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <FrameLayout
-            android:id="@+id/content_frame"
+        android:layout_height="match_parent"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:id="@+id/drawer_layout">
+        <LinearLayout
+            android:id="@+id/layout_main"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_above="@+id/bottom_navigation" />
-        <android.support.design.widget.BottomNavigationView
-            android:id="@+id/bottom_navigation"
-            android:layout_width="match_parent"
-            android:layout_height="56dp"
+            android:orientation="vertical">
+            <include
+                layout="@layout/app_bar" />
+            <RelativeLayout
+                android:id="@+id/activity_main"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <FrameLayout
+                    android:id="@+id/content_frame"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_above="@+id/bottom_navigation" />
+                <android.support.design.widget.BottomNavigationView
+                    android:id="@+id/bottom_navigation"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_gravity="start"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/colorPrimary"
+                    app:itemIconTint="@drawable/nav_item_colors"
+                    app:itemTextColor="@drawable/nav_item_colors"
+                    app:elevation="16dp"
+                    app:menu="@menu/bottom_navigation_main" />
+            </RelativeLayout>
+        </LinearLayout>
+        <android.support.design.widget.NavigationView
+            android:id="@+id/nav_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
             android:layout_gravity="start"
-            android:layout_alignParentBottom="true"
-            android:background="@color/colorPrimary"
-            app:itemIconTint="@drawable/nav_item_colors"
-            app:itemTextColor="@drawable/nav_item_colors"
-            app:elevation="16dp"
-            app:menu="@menu/bottom_navigation_main" />
-    </RelativeLayout>
+            app:menu="@menu/navmenu"
+            app:headerLayout="@layout/headerdrawerlayout" />
+    </android.support.v4.widget.DrawerLayout>
 </android.support.design.widget.CoordinatorLayout>

@@ -1,21 +1,25 @@
-﻿using System;
-using Android.App;
+﻿using Android.App;
 using Android.OS;
 using Android.Views;
 using Android.Support.Design.Widget;
-using Android.Support.Transitions;
-using Android.Support.Fragment;
 using ProjectoFinal.Resources.Fragments;
+using Android.Support.V7.App;
+using Android.Views;
 using Android.Widget;
+using Android.Support.V7.Widget;
+using NavigationDrawer;
+using Android.Support.V4.Widget;
 
 namespace ProjectoFinal
 {
     [Activity(Label = "CentroActivity")]
-    public class CentroActivity : Activity
+    public class CentroActivity : AppCompatActivity
     {
         BottomNavigationView bottomNavigation;
         protected override void OnCreate(Bundle savedInstanceState)
         {
+            DrawerLayout drawerLayouts;
+
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.main);
             // Create your application here
@@ -24,6 +28,20 @@ namespace ProjectoFinal
             bottomNavigation.NavigationItemSelected += BottomNavigation_NavigationItemSelected;
             LoadFragment(Resource.Id.menu_home);
 
+            var toolbar = FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.app_bar);
+            SetSupportActionBar(toolbar);
+            SupportActionBar.SetTitle(Resource.String.app_name);
+            SupportActionBar.SetDisplayHomeAsUpEnabled(true);
+            SupportActionBar.SetDisplayShowHomeEnabled(true);
+            drawerLayouts = FindViewById<DrawerLayout>(Resource.Id.drawer_layout);
+
+            // Attach item selected handler to navigation view
+            var navigationView = FindViewById<NavigationView>(Resource.Id.nav_view);
+
+            // Create ActionBarDrawerToggle button and add it to the toolbar
+            var drawerToggle = new ActionBarDrawerToggle(this, drawerLayouts, toolbar, Resource.String.open_drawer, Resource.String.close_drawer);
+            drawerLayouts.SetDrawerListener(drawerToggle);
+            drawerToggle.SyncState();
         }
 
         private void BottomNavigation_NavigationItemSelected(object sender, BottomNavigationView.NavigationItemSelectedEventArgs e)

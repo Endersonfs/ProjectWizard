@@ -339,7 +339,7 @@
     <AndroidResource Include="Resources\drawable-xxhdpi\ic_search.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\layout\Maine.axml">
+    <AndroidResource Include="Resources\layout\Maine2.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
