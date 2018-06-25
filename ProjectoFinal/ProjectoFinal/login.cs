@@ -23,8 +23,11 @@ namespace ProjectoFinal
             // Create your application here
             SetContentView(Resource.Layout.login);
 
-            var btn = FindViewById<Button>(Resource.Id.btnSignup);
-            btn.Click += Btn_Click;
+            var btnregister = FindViewById<Button>(Resource.Id.btnSignup);
+            btnregister.Click += Btnregister_Click;
+
+            var btnLogin = FindViewById<Button>(Resource.Id.btnLogin);
+            btnLogin.Click += BtnLogin_Click;
 
 
         }

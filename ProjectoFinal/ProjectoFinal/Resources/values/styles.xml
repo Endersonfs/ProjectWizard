@@ -1,11 +1,12 @@
 <resources>
-
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
     </style>
   <style name="TextLabel" parent="TextAppearance.AppCompat">
     <!-- Hint color and label color in FALSE state -->
@@ -20,5 +21,14 @@
   <style name="CheckBoxIndigo">
     <item name="colorAccent">@android:color/holo_green_light</item>
   </style>
+
+  <style  name="MyThemeBar" parent="@android:style/Theme.Material.Light.DarkActionBar">
+    <item name="android:windowNoTitle">true</item>
+    <item name="android:windowActionBar">false</item>
+    <item name="android:colorPrimary">#5A8622</item>
+  </style>
+  
+  <!--Navigation bar-->
+
 
 </resources>

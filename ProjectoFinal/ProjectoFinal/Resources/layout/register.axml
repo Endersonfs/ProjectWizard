@@ -29,7 +29,7 @@
                 android:id="@+id/textInputEditText1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textPersonName"
+                android:inputType=""
                 android:hint="Username"
                 android:singleLine="true" />
         </android.support.design.widget.TextInputLayout>

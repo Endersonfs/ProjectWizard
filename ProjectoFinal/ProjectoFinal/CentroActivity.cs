@@ -1,10 +1,12 @@
 ﻿using System;
 using Android.App;
 using Android.OS;
+using Android.Views;
 using Android.Support.Design.Widget;
 using Android.Support.Transitions;
 using Android.Support.Fragment;
 using ProjectoFinal.Resources.Fragments;
+using Android.Widget;
 
 namespace ProjectoFinal
 {

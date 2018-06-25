@@ -20,7 +20,9 @@ namespace ProjectoFinal.Resources.Fragments
             base.OnCreate(savedInstanceState);
 
             // Create your fragment here
+           
         }
+
         public static FragmentHome NewInstance()
         {
             var frag1 = new FragmentHome { Arguments = new Bundle() };
