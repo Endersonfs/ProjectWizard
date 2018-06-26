@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProjectoFinal.RegisterPage">
+    <ContentPage.Content>
+        <StackLayoutnn pading="30">
+            
+            <Label Text="Registrar nuevo usuario"
+                   fontsize="Large"
+                   FontAtributes="Bold"
+                      />
+        </StackLayoutnn>
+    </ContentPage.Content>
+</ContentPage>
