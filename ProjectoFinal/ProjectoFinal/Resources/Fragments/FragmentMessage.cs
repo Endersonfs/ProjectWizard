@@ -9,7 +9,6 @@ using Android.OS;
 using Android.Runtime;
 using Android.Util;
 using Android.Views;
-using Android.Widget;
 
 namespace ProjectoFinal.Resources.Fragments
 {
@@ -22,6 +21,11 @@ namespace ProjectoFinal.Resources.Fragments
             // Create your fragment here
         }
 
+        public override void OnViewCreated(View view, Bundle savedInstanceState)
+        {
+            base.OnViewCreated(view, savedInstanceState);
+        }
+
         public static FragmentMessage NewInstance()
         {
             var frag1 = new FragmentMessage { Arguments = new Bundle() };
@@ -30,8 +34,8 @@ namespace ProjectoFinal.Resources.Fragments
 
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
-          return inflater.Inflate(Resource.Layout.Fragmentmessage, container, false);
 
+            return inflater.Inflate(Resource.Layout.Fragmentmessage, container, false);
         }
     }
 }

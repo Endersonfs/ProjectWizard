@@ -3,9 +3,120 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <TextView
-        android:text="Vista locations"
+    <android.support.design.widget.TextInputLayout
+        android:minWidth="25px"
+        android:minHeight="25px"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textView1" />
+        android:theme="@style/TextLabel"
+        android:id="@+id/textInputLayout1"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp">
+        <android.support.design.widget.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Direccion"
+            android:textSize="12sp"
+            android:id="@+id/textInputEditText1" />
+    </android.support.design.widget.TextInputLayout>
+    <android.support.design.widget.TextInputLayout
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/TextLabel"
+        android:id="@+id/textInputLayout2"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp">
+        <android.support.design.widget.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nombre del libro"
+            android:textSize="12sp"
+            android:id="@+id/textInputEditText2" />
+    </android.support.design.widget.TextInputLayout>
+    <TextView
+        android:text="Preferencias"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView1"
+        android:textSize="12sp"
+        android:textColor="@android:color/darker_gray"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout1"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp">
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/textInputLayout3">
+            <CheckBox
+                android:text="Venta"
+                android:layout_width="111.3dp"
+                android:theme="@style/CheckBoxIndigo"
+                android:layout_height="wrap_content"
+                android:id="@+id/checkBox1"
+                android:textSize="12sp"
+                android:textColor="@android:color/darker_gray" />
+        </android.support.design.widget.TextInputLayout>
+        <android.support.design.widget.TextInputLayout
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/textInputLayout4">
+            <CheckBox
+                android:text="Intercambio"
+                android:theme="@style/CheckBoxIndigo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/checkBox2"
+                android:textSize="12sp"
+                android:textColor="@android:color/darker_gray" />
+        </android.support.design.widget.TextInputLayout>
+    </LinearLayout>
+    <android.support.design.widget.TextInputLayout
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/TextLabel"
+        android:id="@+id/textInputLayout5"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp">
+        <EditText
+            android:inputType="textMultiLine"
+            android:hint="Descripcion"
+            android:textSize="12sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/editText1" />
+    </android.support.design.widget.TextInputLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout2"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp">
+        <Button
+            android:text="Guardar"
+            android:backgroundTint="@android:color/holo_green_light"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:id="@+id/button1"
+            android:textColor="@android:color/background_light" />
+        <Button
+            android:text="Cancelar"
+            android:backgroundTint="@android:color/holo_green_light"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:id="@+id/button2"
+            android:textColor="@android:color/background_light" />
+    </LinearLayout>
 </LinearLayout>

@@ -2,10 +2,110 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <TextView
-        android:text="Vista ajustes"
+    android:layout_height="match_parent"
+    android:minWidth="25px"
+    android:minHeight="25px">
+    <android.support.design.widget.TextInputLayout
+        android:minWidth="25px"
+        android:minHeight="25px"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textView1" />
+        android:id="@+id/textInputLayout1"
+        android:theme="@style/TextLabel"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp">
+        <android.support.design.widget.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Direccion"
+            android:textSize="12sp"
+            android:id="@+id/textInputEditText1"
+            android:singleLine="true" />
+    </android.support.design.widget.TextInputLayout>
+    <TextView
+        android:text="Genero favorito"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView1"
+        android:textSize="13sp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:textColor="@android:color/darker_gray"
+        android:paddingTop="5dp" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout1"
+        android:layout_marginLeft="30dp"
+        android:paddingTop="5dp">
+        <Spinner xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/spinner1"
+            android:layout_width="89.3dp"
+            android:layout_height="match_parent" />
+        <Spinner
+            android:layout_width="89.3dp"
+            android:layout_height="match_parent"
+            android:id="@+id/spinner2" />
+    </LinearLayout>
+    <TextView
+        android:text="Preferencias"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView2"
+        android:layout_marginLeft="30dp"
+        android:textSize="13sp"
+        android:layout_marginRight="30dp"
+        android:textColor="@android:color/darker_gray"
+        android:paddingTop="5dp" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout2"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:paddingTop="5dp">
+        <CheckBox
+            android:text="Venta"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/checkBox1"
+            android:textSize="12sp"
+            android:theme="@style/CheckBoxIndigo"
+            android:textColor="@android:color/darker_gray" />
+        <CheckBox
+            android:text="Intercambio"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/checkBox2"
+            android:textSize="12sp"
+            android:theme="@style/CheckBoxIndigo"
+            android:textColor="@android:color/darker_gray" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout3"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:paddingTop="5dp">
+        <Button
+            android:text="Actualizar"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:textSize="13sp"
+            android:backgroundTint="@android:color/holo_green_light"
+            android:textColor="@android:color/background_light"
+            android:id="@+id/button1" />
+        <Button
+            android:text="Cancelar"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:textSize="13sp"
+            android:backgroundTint="@android:color/holo_green_light"
+            android:textColor="@android:color/background_light"
+            android:id="@+id/button2" />
+    </LinearLayout>
 </LinearLayout>

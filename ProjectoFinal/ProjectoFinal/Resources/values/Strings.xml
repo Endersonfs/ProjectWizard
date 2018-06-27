@@ -10,5 +10,17 @@
   <string name="strBottomLine">From android material design</string>
   <string name="open_drawer">Open drawer</string>
   <string name="close_drawer">Close drawer</string>
-
+  
+  <!--Spinner data-->
+  <string name="prompt_title">Elegir algo</string>
+  <string-array name="prompt_data">
+    <item>Mercury</item>
+    <item>Venus</item>
+    <item>Earth</item>
+    <item>Mars</item>
+    <item>Jupiter</item>
+    <item>Saturn</item>
+    <item>Uranus</item>
+    <item>Neptune</item>
+  </string-array>
 </resources>
