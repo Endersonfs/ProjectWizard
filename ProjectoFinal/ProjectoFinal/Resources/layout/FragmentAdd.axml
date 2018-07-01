@@ -16,7 +16,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Direccion"
-            android:textSize="12sp"
             android:id="@+id/textInputEditText1" />
     </android.support.design.widget.TextInputLayout>
     <android.support.design.widget.TextInputLayout
@@ -32,7 +31,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Nombre del libro"
-            android:textSize="12sp"
             android:id="@+id/textInputEditText2" />
     </android.support.design.widget.TextInputLayout>
     <TextView
@@ -40,7 +38,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/textView1"
-        android:textSize="12sp"
         android:textColor="@android:color/darker_gray"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp" />
@@ -61,7 +58,6 @@
                 android:theme="@style/CheckBoxIndigo"
                 android:layout_height="wrap_content"
                 android:id="@+id/checkBox1"
-                android:textSize="12sp"
                 android:textColor="@android:color/darker_gray" />
         </android.support.design.widget.TextInputLayout>
         <android.support.design.widget.TextInputLayout
@@ -76,7 +72,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/checkBox2"
-                android:textSize="12sp"
                 android:textColor="@android:color/darker_gray" />
         </android.support.design.widget.TextInputLayout>
     </LinearLayout>
@@ -92,7 +87,6 @@
         <EditText
             android:inputType="textMultiLine"
             android:hint="Descripcion"
-            android:textSize="12sp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/editText1" />

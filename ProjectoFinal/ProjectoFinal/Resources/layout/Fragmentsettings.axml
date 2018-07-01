@@ -18,7 +18,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Direccion"
-            android:textSize="12sp"
             android:id="@+id/textInputEditText1"
             android:singleLine="true" />
     </android.support.design.widget.TextInputLayout>
@@ -27,7 +26,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/textView1"
-        android:textSize="13sp"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
         android:textColor="@android:color/darker_gray"
@@ -54,7 +52,6 @@
         android:layout_height="wrap_content"
         android:id="@+id/textView2"
         android:layout_marginLeft="30dp"
-        android:textSize="13sp"
         android:layout_marginRight="30dp"
         android:textColor="@android:color/darker_gray"
         android:paddingTop="5dp" />
@@ -68,10 +65,9 @@
         android:paddingTop="5dp">
         <CheckBox
             android:text="Venta"
-            android:layout_width="wrap_content"
+            android:layout_width="96.0dp"
             android:layout_height="match_parent"
             android:id="@+id/checkBox1"
-            android:textSize="12sp"
             android:theme="@style/CheckBoxIndigo"
             android:textColor="@android:color/darker_gray" />
         <CheckBox
@@ -79,7 +75,6 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:id="@+id/checkBox2"
-            android:textSize="12sp"
             android:theme="@style/CheckBoxIndigo"
             android:textColor="@android:color/darker_gray" />
     </LinearLayout>
@@ -95,7 +90,6 @@
             android:text="Actualizar"
             android:layout_width="wrap_content"
             android:layout_height="40dp"
-            android:textSize="13sp"
             android:backgroundTint="@android:color/holo_green_light"
             android:textColor="@android:color/background_light"
             android:id="@+id/button1" />
@@ -103,7 +97,6 @@
             android:text="Cancelar"
             android:layout_width="wrap_content"
             android:layout_height="40dp"
-            android:textSize="13sp"
             android:backgroundTint="@android:color/holo_green_light"
             android:textColor="@android:color/background_light"
             android:id="@+id/button2" />

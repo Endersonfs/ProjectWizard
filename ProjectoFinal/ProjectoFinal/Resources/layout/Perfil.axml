@@ -9,7 +9,7 @@
         android:id="@+id/imageView1"
         android:layout_width="wrap_content"
         android:layout_height="176.0dp" />
-    <android.support.design.widget.FloatingActionButton
+    <android.support.design.widget.FloatingActionButton xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -18,7 +18,6 @@
         android:layout_alignRight="@id/imageView1"
         android:layout_centerHorizontal="true"
         android:layout_alignBottom="@id/imageView1"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
         app:fabSize="mini"
         app:backgroundTint="@android:color/holo_green_light" />
     <LinearLayout
@@ -42,7 +41,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Username"
-                android:textSize="12sp"
                 android:id="@+id/textInputEditText1" />
         </android.support.design.widget.TextInputLayout>
         <android.support.design.widget.TextInputLayout
@@ -58,7 +56,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Full name"
-                android:textSize="12sp"
                 android:id="@+id/textInputEditText2" />
         </android.support.design.widget.TextInputLayout>
         <android.support.design.widget.TextInputLayout
@@ -74,7 +71,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Email"
-                android:textSize="12sp"
                 android:id="@+id/textInputEditText3" />
         </android.support.design.widget.TextInputLayout>
         <android.support.design.widget.TextInputLayout
@@ -90,7 +86,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Location"
-                android:textSize="12sp"
                 android:id="@+id/textInputEditText4" />
         </android.support.design.widget.TextInputLayout>
         <TextView
@@ -109,11 +104,11 @@
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp">
             <Spinner
-                android:layout_width="wrap_content"
+                android:layout_width="68.7dp"
                 android:layout_height="match_parent"
                 android:id="@+id/spinner1" />
             <Spinner
-                android:layout_width="wrap_content"
+                android:layout_width="74.0dp"
                 android:layout_height="match_parent"
                 android:id="@+id/spinner2" />
         </LinearLayout>
