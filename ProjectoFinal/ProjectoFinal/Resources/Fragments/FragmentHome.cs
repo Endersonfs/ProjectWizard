@@ -36,5 +36,31 @@ namespace ProjectoFinal.Resources.Fragments
             return inflater.Inflate(Resource.Layout.Fragemethome, container, false);
 
         }
+
+        public override void OnViewCreated(View view, Bundle savedInstanceState)
+        {
+            base.OnViewCreated(view, savedInstanceState);
+            MapFragment mapFragment = (MapFragment)FragmentManager.FindFragmentById(Resource.Id.map);
+
+
+        }
+
+        public void OnMapReady(GoogleMap googleMap)
+        {
+            _map = googleMap;
+            MarkerOptions markerOptions = new MarkerOptions();
+            markerOptions.SetPosition(new LatLng(16.03, 108));
+            markerOptions.SetTitle("test");
+            googleMap.AddMarker(markerOptions);
+            //zoom
+            googleMap.UiSettings.ZoomControlsEnabled = true;
+            googleMap.UiSettings.CompassEnabled = true;
+            googleMap.MoveCamera(CameraUpdateFactory.ZoomIn());
+            _map.setMyLocationEnabled(true);
+            if (_map != null)
+            {
+                _map.MapType = GoogleMap.MapTypeNormal;
+            }
+        }
     }
 }

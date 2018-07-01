@@ -31,7 +31,6 @@
                 android:layout_height="wrap_content"
                 android:inputType="textPersonName"
                 android:hint="Username"
-                android:textSize="12sp"
                 android:singleLine="true" />
         </android.support.design.widget.TextInputLayout>
         <android.support.design.widget.TextInputLayout
@@ -49,7 +48,6 @@
                 android:id="@+id/textInputEditText2"
                 android:inputType="textPassword"
                 android:hint="Password"
-                android:textSize="12sp"
                 android:singleLine="true" />
         </android.support.design.widget.TextInputLayout>
         <android.support.design.widget.TextInputLayout
@@ -63,7 +61,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/checkBox1"
-                android:textSize="12sp"
                 android:layout_marginLeft="30dp"
                 android:theme="@style/CheckBoxIndigo"
                 android:layout_marginRight="30dp"
@@ -96,7 +93,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/textView1"
-            android:textSize="12sp"
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp" />
     </LinearLayout>

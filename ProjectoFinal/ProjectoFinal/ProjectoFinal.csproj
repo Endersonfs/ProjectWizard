@@ -22,6 +22,7 @@
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
     <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
+    <AndroidKeyStore>false</AndroidKeyStore>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>True</DebugSymbols>
@@ -61,6 +62,7 @@
     <Compile Include="CentroActivity.cs" />
     <Compile Include="login.cs" />
     <Compile Include="MainActivity.cs" />
+    <Compile Include="PerfilActivity.cs" />
     <Compile Include="Register.cs" />
     <Compile Include="Resources\Fragments\FragmentAdd.cs" />
     <Compile Include="Resources\Fragments\FragmentHome.cs" />
@@ -101,6 +103,9 @@
     <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_launcher_round.png" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Refractored.Controls.CircleImageView">
+      <Version>1.0.1</Version>
+    </PackageReference>
     <PackageReference Include="Xamarin.Android.Support.Constraint.Layout">
       <Version>1.1.0</Version>
     </PackageReference>
@@ -394,6 +399,16 @@
     <AndroidResource Include="Resources\drawable-xxhdpi\ic_add_white_18dp.png" />
     <AndroidResource Include="Resources\drawable-xxxhdpi\ic_add_white_18dp.png" />
     <AndroidResource Include="Resources\values\dimens.xml" />
+    <AndroidResource Include="Resources\layout\Perfil.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-mdpi\ic_camera_alt_white_18dp.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_camera_alt_white_18dp.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_camera_alt_white_18dp.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_camera_alt_white_18dp.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_camera_alt_white_18dp.png" />
+    <AndroidResource Include="Resources\drawable\google_plus.png" />
+    <AndroidResource Include="Resources\drawable\circle_view.xml" />
     <Content Include="values-v21\Styles.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
