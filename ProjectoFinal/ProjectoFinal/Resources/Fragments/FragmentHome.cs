@@ -79,7 +79,6 @@ namespace ProjectoFinal.Resources.Fragments
             googleMap.UiSettings.ZoomControlsEnabled = true;
             googleMap.UiSettings.CompassEnabled = true;
             googleMap.MoveCamera(CameraUpdateFactory.ZoomIn());
-            _map.setMyLocationEnabled(true);
             if (_map != null)
             {
                 _map.MapType = GoogleMap.MapTypeNormal;
