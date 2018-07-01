@@ -60,6 +60,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CentroActivity.cs" />
+    <Compile Include="LibroActivity.cs" />
     <Compile Include="login.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="PerfilActivity.cs" />
@@ -414,6 +415,19 @@
     <AndroidResource Include="Resources\drawable-xxxhdpi\ic_camera_alt_white_18dp.png" />
     <AndroidResource Include="Resources\drawable\google_plus.png" />
     <AndroidResource Include="Resources\drawable\circle_view.xml" />
+    <AndroidResource Include="Resources\layout\Libros.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-mdpi\ic_delete_grey_600_24dp.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_delete_grey_600_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_delete_grey_600_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_delete_grey_600_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_delete_grey_600_24dp.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_book_cyan_A700_24dp.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_book_cyan_A700_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_book_cyan_A700_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_book_cyan_A700_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_book_cyan_A700_24dp.png" />
     <Content Include="values-v21\Styles.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

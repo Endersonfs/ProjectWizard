@@ -33,8 +33,8 @@ namespace ProjectoFinal
             SupportActionBar.SetTitle(Resource.String.app_name);
             SupportActionBar.SetDisplayHomeAsUpEnabled(true);
             SupportActionBar.SetDisplayShowHomeEnabled(true);
-           drawerLayouts = FindViewById<DrawerLayout>(Resource.Id.drawer_layout);
-
+            drawerLayouts = FindViewById<DrawerLayout>(Resource.Id.drawer_layout);
+                
             // Attach item selected handler to navigation view
             var navigationView = FindViewById<NavigationView>(Resource.Id.nav_view);
             
