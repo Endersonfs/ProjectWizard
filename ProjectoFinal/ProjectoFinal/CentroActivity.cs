@@ -8,6 +8,7 @@ using Android.Widget;
 using Android.Support.V7.Widget;
 using Android.Support.V4.Widget;
 using System;
+using Android.Content;
 
 namespace ProjectoFinal
 {

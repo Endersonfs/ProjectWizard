@@ -61,6 +61,7 @@
     <Compile Include="CentroActivity.cs" />
     <Compile Include="login.cs" />
     <Compile Include="MainActivity.cs" />
+    <Compile Include="PerfilActivity.cs" />
     <Compile Include="Register.cs" />
     <Compile Include="Resources\Fragments\FragmentAdd.cs" />
     <Compile Include="Resources\Fragments\FragmentHome.cs" />
@@ -394,6 +395,14 @@
     <AndroidResource Include="Resources\drawable-xxhdpi\ic_add_white_18dp.png" />
     <AndroidResource Include="Resources\drawable-xxxhdpi\ic_add_white_18dp.png" />
     <AndroidResource Include="Resources\values\dimens.xml" />
+    <AndroidResource Include="Resources\layout\Perfil.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-mdpi\ic_camera_alt_white_18dp.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_camera_alt_white_18dp.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_camera_alt_white_18dp.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_camera_alt_white_18dp.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_camera_alt_white_18dp.png" />
     <Content Include="values-v21\Styles.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
