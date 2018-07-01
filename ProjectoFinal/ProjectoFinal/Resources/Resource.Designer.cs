@@ -364,6 +364,18 @@ namespace ProjectoFinal
 			// aapt resource value: 0x7f0100a5
 			public const int checkedTextViewStyle = 2130772133;
 			
+			// aapt resource value: 0x7f010194
+			public const int civ_border_color = 2130772372;
+			
+			// aapt resource value: 0x7f010195
+			public const int civ_border_overlay = 2130772373;
+			
+			// aapt resource value: 0x7f010193
+			public const int civ_border_width = 2130772371;
+			
+			// aapt resource value: 0x7f010196
+			public const int civ_fill_color = 2130772374;
+			
 			// aapt resource value: 0x7f0100d5
 			public const int closeIcon = 2130772181;
 			
@@ -5861,6 +5873,24 @@ namespace ProjectoFinal
 			
 			// aapt resource value: 0
 			public const int ButtonBarLayout_allowStacking = 0;
+			
+			public static int[] CircleImageView = new int[] {
+					2130772371,
+					2130772372,
+					2130772373,
+					2130772374};
+			
+			// aapt resource value: 1
+			public const int CircleImageView_civ_border_color = 1;
+			
+			// aapt resource value: 2
+			public const int CircleImageView_civ_border_overlay = 2;
+			
+			// aapt resource value: 0
+			public const int CircleImageView_civ_border_width = 0;
+			
+			// aapt resource value: 3
+			public const int CircleImageView_civ_fill_color = 3;
 			
 			public static int[] CollapsingToolbarLayout = new int[] {
 					2130771980,
