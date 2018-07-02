@@ -57,7 +57,7 @@ namespace ProjectoFinal
 
             if(auth.CurrentUser != null)
             {
-                profile.Text = auth.CurrentUser.Email;
+                //profile.Text = auth.CurrentUser.Email;
             }
         }
         

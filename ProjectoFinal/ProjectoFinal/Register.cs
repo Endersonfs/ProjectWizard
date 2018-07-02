@@ -24,6 +24,7 @@ namespace ProjectoFinal
         TextView btnHaveAccount, btnForgot;
         EditText inputEmail, inputPassword;
         RelativeLayout signupLayout;
+        string emailError = "";
 
         FirebaseAuth auth;
 
@@ -72,10 +73,38 @@ namespace ProjectoFinal
             }
         }
 
+        public bool isValidEmail(string email)
+        {
+            return Android.Util.Patterns.EmailAddress.Matcher(email).Matches();
+        }
+
+        private Boolean Error()
+        {
+            var emailvalidate = isValidEmail(inputEmail.Text);
+            if (inputEmail.Text.ToString().Trim().Equals("") && emailvalidate !=true)
+            {
+                emailError = " o email invalido";
+                return false;
+            }
+            if (inputPassword.Text.ToString().Trim().Equals(""))
+            {
+                return false;
+            }
+            return true;
+        }
+
         private void SignUpUser(string email, string pass)
         {
-            auth.CreateUserWithEmailAndPassword(email, pass)
-                .AddOnCompleteListener(this,this);
+            if (Error())
+            {
+                auth.CreateUserWithEmailAndPassword(email, pass)
+                    .AddOnCompleteListener(this, this);
+            }
+            else
+            {
+                Snackbar snackBar = Snackbar.Make(signupLayout, "Register Failed, campos vacios "+emailError, Snackbar.LengthShort);
+                snackBar.Show();
+            }
         }
 
         public void OnComplete(Task task)
@@ -84,6 +113,8 @@ namespace ProjectoFinal
             {
                 Snackbar snackBar = Snackbar.Make(signupLayout, "Register Success", Snackbar.LengthShort);
                 snackBar.Show();
+                inputEmail.Text = "";
+                inputPassword.Text = "";
             }
             else
             {

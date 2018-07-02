@@ -15,16 +15,18 @@ using Android.Views;
 using Android.Widget;
 using Firebase;
 using Firebase.Auth;
+using static Android.Views.View;
 
 namespace ProjectoFinal
 {
     [Activity(Label = "Login")]
-    public class Login : AppCompatActivity, IOnCompleteListener
+    public class Login : AppCompatActivity, IOnClickListener, IOnCompleteListener
     {
 
         EditText input_email, input_password;
         TextView forgotPassword;
         RelativeLayout loginLayout;
+        Button btnregister, btnLogin;
         public static FirebaseApp app;
         FirebaseAuth auth;
 
@@ -36,18 +38,17 @@ namespace ProjectoFinal
             SetContentView(Resource.Layout.login);
             InitFirebaseAuth();
 
-            var btnregister = FindViewById<Button>(Resource.Id.btnSignup);
-            btnregister.Click += Btnregister_Click;
-
-            var btnLogin = FindViewById<Button>(Resource.Id.btnLogin);
-            btnLogin.Click += BtnLogin_Click;
+            btnregister = FindViewById<Button>(Resource.Id.btnSignup);
+            btnLogin = FindViewById<Button>(Resource.Id.btnLogin);
 
             input_email = FindViewById<EditText>(Resource.Id.txtEmail);
             input_password = FindViewById<EditText>(Resource.Id.txtPassword);
             forgotPassword = FindViewById<TextView>(Resource.Id.txtForgotPasswordLogin);
             loginLayout = FindViewById<RelativeLayout>(Resource.Id.LoginLayout);
 
-            forgotPassword.Click += ForgotPassword_Click;
+            btnregister.SetOnClickListener(this);
+            btnLogin.SetOnClickListener(this);
+            forgotPassword.SetOnClickListener(this);
 
 
         }
@@ -66,25 +67,49 @@ namespace ProjectoFinal
             auth = FirebaseAuth.GetInstance(app);
         }
 
-        private void BtnLogin_Click(object sender, EventArgs e)
+        public void OnClick(View v)
         {
-            LoginUser(input_email.Text, input_password.Text);
+            if(v.Id == Resource.Id.btnLogin)
+            {
+                LoginUser(input_email.Text, input_password.Text);
+            }
+            else if(v.Id == Resource.Id.btnSignup)
+            {
+                StartActivity(new Intent(this, typeof(Register)));
+                Finish();
+            }
+            else if(v.Id == Resource.Id.txtForgotPasswordLogin)
+            {
+                StartActivity(new Intent(this, typeof(ForgotPassword)));
+                Finish();
+            }
         }
 
-        private void Btnregister_Click(object sender, EventArgs e)
+        private Boolean Error()
         {
-            StartActivity(new Android.Content.Intent(this, typeof(Register)));
-        }
-
-        private void ForgotPassword_Click(object sender, EventArgs e)
-        {
-            StartActivity(new Android.Content.Intent(this, typeof(ForgotPassword)));
+            
+            if (input_email.Text.ToString().Trim().Equals(""))
+            {
+                return false;
+            }
+            if (input_password.Text.ToString().Trim().Equals(""))
+            {
+                return false;
+            }
+            return true;
         }
 
         private void LoginUser(string email, string pass)
         {
-            auth.SignInWithEmailAndPassword(email, pass)
-                .AddOnCompleteListener(this);
+            if (Error()) {
+                auth.SignInWithEmailAndPassword(email, pass)
+                    .AddOnCompleteListener(this);
+            }
+            else
+            {
+                Snackbar snackBar = Snackbar.Make(loginLayout, "Login Failed, campos vacios o email invalido", Snackbar.LengthShort);
+                snackBar.Show();
+            }
             
         }
 
@@ -94,6 +119,8 @@ namespace ProjectoFinal
             {
                 StartActivity(new Android.Content.Intent(this, typeof(CentroActivity)));
                 Finish();
+                input_email.Text = "";
+                input_password.Text = "";
             }
             else
             {
@@ -101,5 +128,7 @@ namespace ProjectoFinal
                 snackBar.Show();
             }
         }
+
+        
     }
 }
