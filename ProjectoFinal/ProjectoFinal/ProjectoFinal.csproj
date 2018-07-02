@@ -60,6 +60,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CentroActivity.cs" />
+    <Compile Include="ForgotActivity.cs" />
+    <Compile Include="ForgotPassword.cs" />
     <Compile Include="LibroActivity.cs" />
     <Compile Include="login.cs" />
     <Compile Include="MainActivity.cs" />
@@ -73,6 +75,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="google-services.json" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Properties\AndroidManifest.xml">
       <SubType>Designer</SubType>
@@ -121,6 +124,9 @@
     </PackageReference>
     <PackageReference Include="Xamarin.Android.Support.v7.AppCompat">
       <Version>27.0.2.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Firebase.Auth">
+      <Version>60.1142.1</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.GooglePlayServices.Maps">
       <Version>60.1142.1</Version>
@@ -433,6 +439,9 @@
     <AndroidResource Include="Resources\drawable-xhdpi\ic_location_on_green_light_36dp.png" />
     <AndroidResource Include="Resources\drawable-xxhdpi\ic_location_on_green_light_36dp.png" />
     <AndroidResource Include="Resources\drawable-xxxhdpi\ic_location_on_green_light_36dp.png" />
+    <AndroidResource Include="Resources\layout\ForgotPassword.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
     <Content Include="values-v21\Styles.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

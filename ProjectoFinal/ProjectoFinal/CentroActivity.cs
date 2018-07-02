@@ -9,20 +9,29 @@ using Android.Support.V7.Widget;
 using Android.Support.V4.Widget;
 using System;
 using Android.Content;
+using Firebase.Auth;
+using Android.Gms.Tasks;
 
 namespace ProjectoFinal
 {
     [Activity(Label = "CentroActivity")]
-    public class CentroActivity : AppCompatActivity
+    public class CentroActivity : AppCompatActivity //, /IOnCompleteListener
     {
         BottomNavigationView bottomNavigation;
         DrawerLayout drawerLayouts;
+        TextView profile;
+        FirebaseAuth auth;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.main);
             // Create your application here
+
+            //firebase
+            auth = FirebaseAuth.GetInstance(Login.app);
+
+            profile = FindViewById<TextView>(Resource.Id.ProfileName);
 
             bottomNavigation = FindViewById<BottomNavigationView>(Resource.Id.bottom_navigation);
             bottomNavigation.NavigationItemSelected += BottomNavigation_NavigationItemSelected;
@@ -46,6 +55,10 @@ namespace ProjectoFinal
 #pragma warning restore CS0618 // El tipo o el miembro están obsoletos
             drawerToggle.SyncState();
 
+            if(auth.CurrentUser != null)
+            {
+                profile.Text = auth.CurrentUser.Email;
+            }
         }
         
         private void NavigationView_NavigationItemSelected(object sender, NavigationView.NavigationItemSelectedEventArgs e)
@@ -70,6 +83,7 @@ namespace ProjectoFinal
                     Toast.MakeText(this, "Ayuda selected!", ToastLength.Short).Show();
                     break;
                 case (Resource.Id.nav_logout):
+                    LogoutUser();
                     Toast.MakeText(this, "Log out selected!", ToastLength.Short).Show();
                     break;
                 default :
@@ -79,7 +93,6 @@ namespace ProjectoFinal
             // Close drawer
             drawerLayouts.CloseDrawers();
         }
-
 
         private void BottomNavigation_NavigationItemSelected(object sender, BottomNavigationView.NavigationItemSelectedEventArgs e)
         {
@@ -111,5 +124,31 @@ namespace ProjectoFinal
                .Commit();
         }
 
+        private void LogoutUser()
+        {
+
+            auth.SignOut();
+            if(auth.CurrentUser == null)
+            {
+                StartActivity(new Intent(this, typeof(Login)));
+                Finish();
+            }
+        }
+        /*
+        private void ChangePassword(string newPass)
+        {
+            FirebaseUser user = auth.CurrentUser;
+            user.UpdatePassword(newPass)
+                .AddOnCompleteListener(this);
+        }*/
+        /*
+        public void OnComplete(Task task)
+        {
+            if(task.IsSuccessful == true)
+            {
+                Snackbar snackbar = Snackbar.Make(layout, "ChangePassword has ben changed", Snackbar.LengthShort);
+                snackbar.Show();
+            }
+        }*/
     }
 }
