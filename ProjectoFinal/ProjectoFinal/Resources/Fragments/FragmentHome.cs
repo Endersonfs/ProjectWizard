@@ -71,7 +71,7 @@ namespace ProjectoFinal.Resources.Fragments
             markerOptions.SetPosition(new LatLng(16.03, 108));
             markerOptions.SetTitle("test");
             markerOptions.Draggable(true);
-            markerOptions.SetIcon(BitmapDescriptorFactory.FromResource(Resource.Drawable.ic_book_cyan_A700_24dp));
+            markerOptions.SetIcon(BitmapDescriptorFactory.FromResource(Resource.Drawable.ic_location_on_green_light_36dp));
             _map.AddMarker(markerOptions);
             //zoom
             _map.UiSettings.ZoomControlsEnabled = true;
