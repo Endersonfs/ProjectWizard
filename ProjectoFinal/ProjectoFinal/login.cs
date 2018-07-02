@@ -80,7 +80,7 @@ namespace ProjectoFinal
             }
             else if(v.Id == Resource.Id.txtForgotPasswordLogin)
             {
-                StartActivity(new Intent(this, typeof(ForgotPassword)));
+                StartActivity(new Intent(this, typeof(ForgotActivity)));
                 Finish();
             }
         }
