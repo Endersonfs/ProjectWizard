@@ -11,11 +11,13 @@
         android:theme="@style/TextLabel"
         android:id="@+id/textInputLayout1"
         android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp">
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="36dp">
         <android.support.design.widget.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Direccion"
+            android:singleLine="true"
             android:id="@+id/textInputEditText1" />
     </android.support.design.widget.TextInputLayout>
     <android.support.design.widget.TextInputLayout
@@ -31,6 +33,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Nombre del libro"
+            android:singleLine="true"
             android:id="@+id/textInputEditText2" />
     </android.support.design.widget.TextInputLayout>
     <TextView
@@ -40,14 +43,16 @@
         android:id="@+id/textView1"
         android:textColor="@android:color/darker_gray"
         android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp" />
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="8dp" />
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/linearLayout1"
         android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp">
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="5dp">
         <android.support.design.widget.TextInputLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
@@ -97,19 +102,22 @@
         android:layout_height="wrap_content"
         android:id="@+id/linearLayout2"
         android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp">
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="10dp">
         <Button
             android:text="Guardar"
             android:backgroundTint="@android:color/holo_green_light"
             android:layout_width="wrap_content"
-            android:layout_height="40dp"
+            android:layout_height="wrap_content"
             android:id="@+id/button1"
-            android:textColor="@android:color/background_light" />
+            android:textColor="@android:color/background_light"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="5dp" />
         <Button
             android:text="Cancelar"
             android:backgroundTint="@android:color/holo_green_light"
             android:layout_width="wrap_content"
-            android:layout_height="40dp"
+            android:layout_height="wrap_content"
             android:id="@+id/button2"
             android:textColor="@android:color/background_light" />
     </LinearLayout>

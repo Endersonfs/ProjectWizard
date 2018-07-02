@@ -16,10 +16,10 @@ namespace ProjectoFinal
     public class CentroActivity : AppCompatActivity
     {
         BottomNavigationView bottomNavigation;
+        DrawerLayout drawerLayouts;
         protected override void OnCreate(Bundle savedInstanceState)
         {
-            DrawerLayout drawerLayouts;
-
+            
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.main);
             // Create your application here
@@ -37,7 +37,7 @@ namespace ProjectoFinal
                 
             // Attach item selected handler to navigation view
             var navigationView = FindViewById<NavigationView>(Resource.Id.nav_view);
-            
+            navigationView.NavigationItemSelected += NavigationView_NavigationItemSelected;
             // Create ActionBarDrawerToggle button and add it to the toolbar
             var drawerToggle = new ActionBarDrawerToggle(this, drawerLayouts, toolbar, Resource.String.open_drawer, Resource.String.close_drawer);
 #pragma warning disable CS0618 // El tipo o el miembro están obsoletos
@@ -47,6 +47,39 @@ namespace ProjectoFinal
             drawerToggle.SyncState();
 
         }
+        
+        private void NavigationView_NavigationItemSelected(object sender, NavigationView.NavigationItemSelectedEventArgs e)
+        {
+            
+            switch (e.MenuItem.ItemId)
+            {
+                case (Resource.Id.nav_perfil):
+                    Toast.MakeText(this, "Perfil selected!", ToastLength.Short).Show();
+                    var intent = new Intent(this, typeof(PerfilActivity));
+                    StartActivity(intent);
+                    break;
+                case (Resource.Id.nav_libros):
+                    Toast.MakeText(this, "Libros selected!", ToastLength.Short).Show();
+                    var intent2 = new Intent(this, typeof(LibroActivity));
+                    StartActivity(intent2);
+                    break;
+                case (Resource.Id.nav_configuracion):
+                    Toast.MakeText(this, "Configuration selected!", ToastLength.Short).Show();
+                    break;
+                case (Resource.Id.nav_Ayuda):
+                    Toast.MakeText(this, "Ayuda selected!", ToastLength.Short).Show();
+                    break;
+                case (Resource.Id.nav_logout):
+                    Toast.MakeText(this, "Log out selected!", ToastLength.Short).Show();
+                    break;
+                default :
+                    //drawerLayouts.CloseDrawers();
+                    break;
+            }
+            // Close drawer
+            drawerLayouts.CloseDrawers();
+        }
+
 
         private void BottomNavigation_NavigationItemSelected(object sender, BottomNavigationView.NavigationItemSelectedEventArgs e)
         {

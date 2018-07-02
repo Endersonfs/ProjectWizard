@@ -12,6 +12,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/textInputLayout1"
         android:theme="@style/TextLabel"
+        android:layout_marginTop="36dp"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp">
         <android.support.design.widget.TextInputEditText
@@ -26,6 +27,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/textView1"
+        android:layout_marginTop="5dp"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
         android:textColor="@android:color/darker_gray"
@@ -51,6 +53,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/textView2"
+        android:layout_marginTop="5dp"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
         android:textColor="@android:color/darker_gray"
@@ -85,18 +88,21 @@
         android:id="@+id/linearLayout3"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
+        android:layout_marginTop="8dp"
         android:paddingTop="5dp">
         <Button
             android:text="Actualizar"
             android:layout_width="wrap_content"
-            android:layout_height="40dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
             android:backgroundTint="@android:color/holo_green_light"
             android:textColor="@android:color/background_light"
-            android:id="@+id/button1" />
+            android:id="@+id/button1"
+            android:layout_marginRight="5dp" />
         <Button
             android:text="Cancelar"
             android:layout_width="wrap_content"
-            android:layout_height="40dp"
+            android:layout_height="wrap_content"
             android:backgroundTint="@android:color/holo_green_light"
             android:textColor="@android:color/background_light"
             android:id="@+id/button2" />

@@ -129,14 +129,17 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/linearLayout2"
-            android:layout_marginLeft="30dp">
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp">
             <Button
                 android:text="Actualizar"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:backgroundTint="@android:color/holo_green_light"
                 android:id="@+id/button1"
-                android:textColor="@android:color/background_light" />
+                android:textColor="@android:color/background_light"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="5dp" />
             <Button
                 android:text="Cancelar"
                 android:layout_width="wrap_content"
