@@ -22,13 +22,16 @@ namespace ProjectoFinal
     [Activity(Label = "Login")]
     public class Login : AppCompatActivity, IOnClickListener, IOnCompleteListener
     {
-
+        
         EditText input_email, input_password;
         TextView forgotPassword;
         RelativeLayout loginLayout;
         Button btnregister, btnLogin;
         public static FirebaseApp app;
         FirebaseAuth auth;
+#pragma warning disable CS0618 // El tipo o el miembro están obsoletos
+        ProgressDialog process;
+#pragma warning restore CS0618 // El tipo o el miembro están obsoletos
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -104,9 +107,15 @@ namespace ProjectoFinal
             if (Error()) {
                 auth.SignInWithEmailAndPassword(email, pass)
                     .AddOnCompleteListener(this);
+#pragma warning disable CS0618 // El tipo o el miembro están obsoletos
+                process = new ProgressDialog(this);
+#pragma warning restore CS0618 // El tipo o el miembro están obsoletos
+                process.SetMessage("Validando informacion, espere.");
+                process.Show();
             }
             else
             {
+                process.Dismiss();
                 Snackbar snackBar = Snackbar.Make(loginLayout, "Login Failed, campos vacios o email invalido", Snackbar.LengthShort);
                 snackBar.Show();
             }
@@ -117,6 +126,7 @@ namespace ProjectoFinal
         {
             if (task.IsSuccessful)
             {
+                process.Dismiss();
                 StartActivity(new Android.Content.Intent(this, typeof(CentroActivity)));
                 Finish();
                 input_email.Text = "";
@@ -124,6 +134,7 @@ namespace ProjectoFinal
             }
             else
             {
+                process.Dismiss();
                 Snackbar snackBar = Snackbar.Make(loginLayout, "Login Failed", Snackbar.LengthShort);
                 snackBar.Show();
             }
