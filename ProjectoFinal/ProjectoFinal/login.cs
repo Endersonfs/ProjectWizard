@@ -55,6 +55,30 @@ namespace ProjectoFinal
 
 
         }
+        protected override void OnStart()
+        {
+            base.OnStart();
+            FirebaseUser firebaseUser = auth.CurrentUser;
+            updateUI(firebaseUser);
+
+        }
+        private void updateUI(FirebaseUser user)
+        {
+            if (user != null)
+            {
+
+                Toast.MakeText(this, "Logeado", ToastLength.Short).Show();
+                Intent intent = new Intent(this, typeof(CentroActivity));
+                StartActivity(intent);
+
+
+            }
+            else
+            {
+                Toast.MakeText(this, "NO LOGIN", ToastLength.Short).Show();
+
+            }
+        }
 
         private void InitFirebaseAuth()
         {
