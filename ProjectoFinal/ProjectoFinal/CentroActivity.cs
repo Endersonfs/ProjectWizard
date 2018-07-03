@@ -21,6 +21,7 @@ namespace ProjectoFinal
         DrawerLayout drawerLayouts;
         TextView profile;
         FirebaseAuth auth;
+        string email="";
         protected override void OnCreate(Bundle savedInstanceState)
         {
             
@@ -54,7 +55,25 @@ namespace ProjectoFinal
             
 #pragma warning restore CS0618 // El tipo o el miembro están obsoletos
             drawerToggle.SyncState();
+            AccountData_Load();
             
+        }
+
+
+        private void AccountData_Load()
+        {
+            //Check user login
+            if (auth == null)
+                auth = FirebaseAuth.GetInstance(Login.app);
+            //Get account info
+            if (auth.CurrentUser != null)
+            {
+                //Get e-mail
+                email = auth.CurrentUser.Email;
+                //Setup database
+                //Toast.MakeText(this, ""+auth.CurrentUser.Email, ToastLength.Short).Show();
+
+            }
         }
 
         private void NavigationView_NavigationItemSelected(object sender, NavigationView.NavigationItemSelectedEventArgs e)
@@ -63,7 +82,8 @@ namespace ProjectoFinal
             switch (e.MenuItem.ItemId)
             {
                 case (Resource.Id.nav_perfil):
-                    //Toast.MakeText(this, "Perfil selected!", ToastLength.Short).Show();
+                    Toast.MakeText(this, "Perfil selected!", ToastLength.Short).Show();
+                    profile.Text = email;
                     StartActivity (new Intent(this, typeof(PerfilActivity)));
                     Finish();
                     break;
