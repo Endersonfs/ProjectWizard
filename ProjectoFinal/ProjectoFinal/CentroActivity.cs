@@ -54,27 +54,23 @@ namespace ProjectoFinal
             
 #pragma warning restore CS0618 // El tipo o el miembro están obsoletos
             drawerToggle.SyncState();
-
-            if(auth.CurrentUser != null)
-            {
-                //profile.Text = auth.CurrentUser.Email;
-            }
+            
         }
-        
+
         private void NavigationView_NavigationItemSelected(object sender, NavigationView.NavigationItemSelectedEventArgs e)
         {
             
             switch (e.MenuItem.ItemId)
             {
                 case (Resource.Id.nav_perfil):
-                    Toast.MakeText(this, "Perfil selected!", ToastLength.Short).Show();
-                    var intent = new Intent(this, typeof(PerfilActivity));
-                    StartActivity(intent);
+                    //Toast.MakeText(this, "Perfil selected!", ToastLength.Short).Show();
+                    StartActivity (new Intent(this, typeof(PerfilActivity)));
+                    Finish();
                     break;
                 case (Resource.Id.nav_libros):
                     Toast.MakeText(this, "Libros selected!", ToastLength.Short).Show();
-                    var intent2 = new Intent(this, typeof(LibroActivity));
-                    StartActivity(intent2);
+                    StartActivity( new Intent(this, typeof(LibroActivity)));
+                    Finish();
                     break;
                 case (Resource.Id.nav_configuracion):
                     Toast.MakeText(this, "Configuration selected!", ToastLength.Short).Show();

@@ -25,6 +25,9 @@ namespace ProjectoFinal
         private TextView btnback;
         private RelativeLayout forgotLayout;
         string emailError = "";
+#pragma warning disable CS0618 // El tipo o el miembro están obsoletos
+        ProgressDialog process;
+#pragma warning restore CS0618 // El tipo o el miembro están obsoletos
 
         FirebaseAuth auth;
         protected override void OnCreate(Bundle savedInstanceState)
@@ -82,13 +85,19 @@ namespace ProjectoFinal
         }
         private void ResetPassword(string email)
         {
+#pragma warning disable CS0618 // El tipo o el miembro están obsoletos
+            process = new ProgressDialog(this);
+#pragma warning restore CS0618 // El tipo o el miembro están obsoletos
             if (Error())
             {
                 auth.SendPasswordResetEmail(email)
                     .AddOnCompleteListener(this, this);
+                process.SetMessage("Validando informacion, espere.");
+                process.Show();
             }
             else
             {
+                if (process.IsShowing) { process.Dismiss(); }
                 Snackbar snackBar = Snackbar.Make(forgotLayout, "Reset password failed, "+ emailError, Snackbar.LengthShort);
                 snackBar.Show();
             }
@@ -98,11 +107,13 @@ namespace ProjectoFinal
         {
             if(task.IsSuccessful == false)
             {
+                if (process.IsShowing) { process.Dismiss(); }
                 Snackbar snackbar = Snackbar.Make(forgotLayout, "Reset password failed", Snackbar.LengthShort);
                 snackbar.Show();
             }
             else
             {
+                if (process.IsShowing) { process.Dismiss(); }
                 Snackbar snackbar = Snackbar.Make(forgotLayout, "Reset password link set to email: "+inputEmail.Text, Snackbar.LengthShort);
                 snackbar.Show();
                 inputEmail.Text = "";

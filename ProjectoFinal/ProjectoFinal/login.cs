@@ -104,18 +104,18 @@ namespace ProjectoFinal
 
         private void LoginUser(string email, string pass)
         {
+#pragma warning disable CS0618 // El tipo o el miembro están obsoletos
+            process = new ProgressDialog(this);
+#pragma warning restore CS0618 // El tipo o el miembro están obsoletos
             if (Error()) {
                 auth.SignInWithEmailAndPassword(email, pass)
                     .AddOnCompleteListener(this);
-#pragma warning disable CS0618 // El tipo o el miembro están obsoletos
-                process = new ProgressDialog(this);
-#pragma warning restore CS0618 // El tipo o el miembro están obsoletos
                 process.SetMessage("Validando informacion, espere.");
                 process.Show();
             }
             else
             {
-                process.Dismiss();
+                if (process.IsShowing) { process.Dismiss(); }
                 Snackbar snackBar = Snackbar.Make(loginLayout, "Login Failed, campos vacios o email invalido", Snackbar.LengthShort);
                 snackBar.Show();
             }
@@ -126,7 +126,8 @@ namespace ProjectoFinal
         {
             if (task.IsSuccessful)
             {
-                process.Dismiss();
+                if (process.IsShowing) { process.Dismiss(); }
+                Toast.MakeText(this, ""+auth.CurrentUser.Email, ToastLength.Short).Show();
                 StartActivity(new Android.Content.Intent(this, typeof(CentroActivity)));
                 Finish();
                 input_email.Text = "";
@@ -134,7 +135,7 @@ namespace ProjectoFinal
             }
             else
             {
-                process.Dismiss();
+                if (process.IsShowing) { process.Dismiss(); }
                 Snackbar snackBar = Snackbar.Make(loginLayout, "Login Failed", Snackbar.LengthShort);
                 snackBar.Show();
             }

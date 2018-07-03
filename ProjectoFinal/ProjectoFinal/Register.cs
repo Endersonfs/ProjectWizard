@@ -25,6 +25,7 @@ namespace ProjectoFinal
         EditText inputEmail, inputPassword;
         RelativeLayout signupLayout;
         string emailError = "";
+        ProgressDialog process;
 
         FirebaseAuth auth;
 
@@ -95,13 +96,19 @@ namespace ProjectoFinal
 
         private void SignUpUser(string email, string pass)
         {
+#pragma warning disable CS0618 // El tipo o el miembro están obsoletos
+            process = new ProgressDialog(this);
+#pragma warning restore CS0618 // El tipo o el miembro están obsoletos
             if (Error())
             {
                 auth.CreateUserWithEmailAndPassword(email, pass)
                     .AddOnCompleteListener(this, this);
+                process.SetMessage("Validando informacion, espere.");
+                process.Show();
             }
             else
             {
+                if (process.IsShowing) { process.Dismiss(); }
                 Snackbar snackBar = Snackbar.Make(signupLayout, "Register Failed, campos vacios "+emailError, Snackbar.LengthShort);
                 snackBar.Show();
             }
@@ -111,6 +118,7 @@ namespace ProjectoFinal
         {
             if(task.IsSuccessful == true)
             {
+                if (process.IsShowing) { process.Dismiss(); }
                 Snackbar snackBar = Snackbar.Make(signupLayout, "Register Success", Snackbar.LengthShort);
                 snackBar.Show();
                 inputEmail.Text = "";
@@ -118,6 +126,7 @@ namespace ProjectoFinal
             }
             else
             {
+                if (process.IsShowing) { process.Dismiss(); }
                 Snackbar snackBar = Snackbar.Make(signupLayout, "Register failed", Snackbar.LengthShort);
                 snackBar.Show();
             }
