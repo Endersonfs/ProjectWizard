@@ -21,11 +21,13 @@ namespace ProjectoFinal
     public class Register : AppCompatActivity, IOnClickListener, IOnCompleteListener
     {
         Button btnSignup;
-        TextView btnHaveAccount, btnForgot;
+        TextView btnHaveAccount;
         EditText inputEmail, inputPassword;
         RelativeLayout signupLayout;
         string emailError = "";
+#pragma warning disable CS0618 // El tipo o el miembro están obsoletos
         ProgressDialog process;
+#pragma warning restore CS0618 // El tipo o el miembro están obsoletos
 
         FirebaseAuth auth;
 
@@ -43,7 +45,6 @@ namespace ProjectoFinal
             btnSignup = FindViewById<Button>(Resource.Id.btnSignup);
 
             btnHaveAccount = FindViewById<TextView>(Resource.Id.txtHaveAccount);
-            btnForgot = FindViewById<TextView>(Resource.Id.txtForgotPassSignup);
 
             inputEmail = FindViewById<EditText>(Resource.Id.txtEmailRegister);
             inputPassword = FindViewById<EditText>(Resource.Id.txtPasswordRegister);
@@ -53,7 +54,6 @@ namespace ProjectoFinal
             //action listener
             btnSignup.SetOnClickListener(this);
             btnHaveAccount.SetOnClickListener(this);
-            btnForgot.SetOnClickListener(this);
         }
 
         public void OnClick(View v)
@@ -61,11 +61,6 @@ namespace ProjectoFinal
             if(v.Id == Resource.Id.txtHaveAccount)
             {
                 StartActivity(new Intent(this, typeof(Login)));
-                Finish();
-            }
-            else if(v.Id == Resource.Id.txtForgotPassSignup)
-            {
-                StartActivity(new Intent(this, typeof(ForgotActivity)));
                 Finish();
             }
             else if (v.Id == Resource.Id.btnSignup)

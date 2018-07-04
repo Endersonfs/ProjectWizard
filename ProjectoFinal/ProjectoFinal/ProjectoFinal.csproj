@@ -73,6 +73,7 @@
     <Compile Include="Resources\Fragments\FragmentSettings.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Splash.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="google-services.json" />
@@ -443,6 +444,9 @@
     <AndroidResource Include="Resources\drawable-xxhdpi\ic_location_on_green_light_36dp.png" />
     <AndroidResource Include="Resources\drawable-xxxhdpi\ic_location_on_green_light_36dp.png" />
     <AndroidResource Include="Resources\layout\ForgotPassword.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\Inicio.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
     <Content Include="values-v21\Styles.xml" />

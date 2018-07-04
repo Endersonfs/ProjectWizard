@@ -14,7 +14,7 @@ using Firebase.Auth;
 
 namespace ProjectoFinal
 {
-    [Activity(Label = "PerfilActivity")]
+    [Activity(Label = "PerfilActivity", ParentActivity = typeof(CentroActivity))]
     public class PerfilActivity : AppCompatActivity
     {
         FirebaseAuth auth;
@@ -35,6 +35,12 @@ namespace ProjectoFinal
             SupportActionBar.SetDisplayHomeAsUpEnabled(true);
             SupportActionBar.SetDisplayShowHomeEnabled(true);
 
+        }
+        public override void OnBackPressed()
+        {
+            base.OnBackPressed();
+            StartActivity(new Intent(this, typeof(CentroActivity)));
+            Finish();
         }
     }
 }

@@ -19,7 +19,7 @@ using static Android.Views.View;
 
 namespace ProjectoFinal
 {
-    [Activity(Label = "Login")]
+    [Activity(Label = "Login", NoHistory = true)]
     public class Login : AppCompatActivity, IOnClickListener, IOnCompleteListener
     {
         
@@ -62,6 +62,7 @@ namespace ProjectoFinal
             updateUI(firebaseUser);
 
         }
+
         private void updateUI(FirebaseUser user)
         {
             if (user != null)
@@ -164,6 +165,7 @@ namespace ProjectoFinal
                 snackBar.Show();
             }
         }
+
 
         
     }

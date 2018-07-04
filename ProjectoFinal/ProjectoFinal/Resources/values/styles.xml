@@ -31,6 +31,13 @@
 	    <item name="colorAccent">#0C92CF</item> 
   	</style>  
   	<style name="MyTheme" parent="MyTheme.Base">
-  	</style> 
+  	</style>
+
+  <!--splash-->
+  <style name="MyTheme.Splash" parent ="Theme.AppCompat.Light.NoActionBar">
+    <item name="android:windowBackground">@mipmap/proto2new</item>
+    <item name="android:windowNoTitle">true</item>
+    <item name="android:windowFullscreen">true</item>
+  </style>
 
 </resources>

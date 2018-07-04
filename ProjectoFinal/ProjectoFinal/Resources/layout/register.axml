@@ -132,12 +132,5 @@
             android:drawableStart="@drawable/google_plus"
             android:textColor="@android:color/background_light"
             android:backgroundTint="@android:color/holo_red_dark" />
-        <TextView
-            android:text="Forgot password"
-            android:clickable="true"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/txtForgotPassSignup"
-            android:layout_marginLeft="30dp" />
     </LinearLayout>
 </RelativeLayout>
