@@ -17,7 +17,7 @@ using static Android.Views.View;
 
 namespace ProjectoFinal
 {
-    [Activity(Label = "ForgotActivity")]
+    [Activity(Label = "ForgotActivity", NoHistory = true)]
     public class ForgotActivity : AppCompatActivity, IOnClickListener, IOnCompleteListener
     {
         private EditText inputEmail;

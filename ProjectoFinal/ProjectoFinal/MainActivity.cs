@@ -7,7 +7,7 @@ using Android.Content;
 
 namespace ProjectoFinal
 {
-    [Activity(Label = "@string/app_name", Theme = "@style/AppTheme", MainLauncher = true)]
+    [Activity(Label = "@string/app_name",  Theme = "@style/AppTheme", NoHistory = true)]
     public class MainActivity : AppCompatActivity
     {
         protected override void OnCreate(Bundle savedInstanceState)
@@ -26,6 +26,7 @@ namespace ProjectoFinal
         {
             var intent = new Intent(this, typeof(Login));
             StartActivity(intent);
+            
         }
     }
 }

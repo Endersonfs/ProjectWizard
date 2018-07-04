@@ -37,23 +37,6 @@
             android:minHeight="25px"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/textInputLayout1"
-            android:theme="@style/TextLabel"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp">
-            <android.support.design.widget.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Username"
-                android:inputType="textPersonName"
-                android:singleLine="true"
-                android:id="@+id/textInputEditText1" />
-        </android.support.design.widget.TextInputLayout>
-        <android.support.design.widget.TextInputLayout
-            android:minWidth="25px"
-            android:minHeight="25px"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:id="@+id/textInputLayout2"
             android:theme="@style/TextLabel"
             android:layout_marginLeft="30dp"
@@ -64,7 +47,7 @@
                 android:hint="Full name"
                 android:inputType="textPersonName"
                 android:singleLine="true"
-                android:id="@+id/textInputEditText2" />
+                android:id="@+id/txtFullname" />
         </android.support.design.widget.TextInputLayout>
         <android.support.design.widget.TextInputLayout
             android:minWidth="25px"
@@ -81,49 +64,8 @@
                 android:hint="Email"
                 android:inputType="textEmailAddress"
                 android:singleLine="true"
-                android:id="@+id/textInputEditText3" />
+                android:id="@+id/txtEmail" />
         </android.support.design.widget.TextInputLayout>
-        <android.support.design.widget.TextInputLayout
-            android:minWidth="25px"
-            android:minHeight="25px"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/textInputLayout4"
-            android:theme="@style/TextLabel"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp">
-            <android.support.design.widget.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Location"
-                android:inputType="textPostalAddress"
-                android:singleLine="true"
-                android:id="@+id/textInputEditText4" />
-        </android.support.design.widget.TextInputLayout>
-        <TextView
-            android:text="Genero favorito"
-            android:id="@+id/textView1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
-            android:textColor="@android:color/darker_gray" />
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/linearLayout1"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp">
-            <Spinner
-                android:layout_width="68.7dp"
-                android:layout_height="match_parent"
-                android:id="@+id/spinner1" />
-            <Spinner
-                android:layout_width="74.0dp"
-                android:layout_height="match_parent"
-                android:id="@+id/spinner2" />
-        </LinearLayout>
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
@@ -136,7 +78,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:backgroundTint="@android:color/holo_green_light"
-                android:id="@+id/button1"
+                android:id="@+id/btnUpdate"
                 android:textColor="@android:color/background_light"
                 android:layout_marginLeft="25dp"
                 android:layout_marginRight="5dp" />
@@ -145,7 +87,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@android:color/holo_green_light"
-                android:id="@+id/button2"
+                android:id="@+id/btnCancelar"
                 android:textColor="@android:color/background_light" />
         </LinearLayout>
     </LinearLayout>

@@ -21,6 +21,7 @@ namespace ProjectoFinal
         DrawerLayout drawerLayouts;
         TextView profile;
         FirebaseAuth auth;
+        string email="";
         protected override void OnCreate(Bundle savedInstanceState)
         {
             
@@ -63,7 +64,7 @@ namespace ProjectoFinal
             switch (e.MenuItem.ItemId)
             {
                 case (Resource.Id.nav_perfil):
-                    //Toast.MakeText(this, "Perfil selected!", ToastLength.Short).Show();
+                    Toast.MakeText(this, "Perfil selected!", ToastLength.Short).Show();
                     StartActivity (new Intent(this, typeof(PerfilActivity)));
                     Finish();
                     break;
@@ -146,5 +147,7 @@ namespace ProjectoFinal
                 snackbar.Show();
             }
         }*/
+
+
     }
 }

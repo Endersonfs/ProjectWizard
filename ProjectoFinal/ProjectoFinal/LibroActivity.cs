@@ -13,7 +13,7 @@ using Android.Support.V7.App;
 
 namespace ProjectoFinal
 {
-    [Activity(Label = "LibroActivity")]
+    [Activity(Label = "LibroActivity", ParentActivity = typeof(CentroActivity) )]
     public class LibroActivity : AppCompatActivity
     {
         protected override void OnCreate(Bundle savedInstanceState)
