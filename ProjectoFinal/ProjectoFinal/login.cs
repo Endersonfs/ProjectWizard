@@ -69,6 +69,8 @@ namespace ProjectoFinal
 
                 Toast.MakeText(this, "Logeado", ToastLength.Short).Show();
                 Intent intent = new Intent(this, typeof(CentroActivity));
+                string nombre = user.Email;
+                intent.PutExtra("email", nombre);
                 StartActivity(intent);
 
 
