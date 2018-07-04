@@ -86,6 +86,7 @@ namespace ProjectoFinal
             var options = new FirebaseOptions.Builder()
                 .SetApplicationId("1:671501226297:android:7d6a044c9c07f354")
                 .SetApiKey("AIzaSyAMntWQy4Bp9rVKnnb7IZLx1uz0S2meGec")
+                .SetDatabaseUrl("https://projectofinal-32957.firebaseio.com/")
                 .Build();
 
             if(app == null)

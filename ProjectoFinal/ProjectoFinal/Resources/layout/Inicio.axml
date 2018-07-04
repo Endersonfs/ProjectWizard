@@ -43,7 +43,7 @@
         <ProgressBar
             style="?android:attr/progressBarStyleSmall"
             android:layout_width="match_parent"
-            android:layout_height="74.7dp"
+            android:layout_height="48.7dp"
             android:id="@+id/progressBar1"
             android:layout_below="@+id/logoname"
             android:indeterminateTint="@android:color/background_light" />

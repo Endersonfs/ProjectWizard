@@ -65,6 +65,7 @@
     <Compile Include="LibroActivity.cs" />
     <Compile Include="login.cs" />
     <Compile Include="MainActivity.cs" />
+    <Compile Include="Models\Usuario.cs" />
     <Compile Include="PerfilActivity.cs" />
     <Compile Include="Register.cs" />
     <Compile Include="Resources\Fragments\FragmentAdd.cs" />
@@ -110,6 +111,9 @@
     <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_launcher_round.png" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>11.0.2</Version>
+    </PackageReference>
     <PackageReference Include="Refractored.Controls.CircleImageView">
       <Version>1.0.1</Version>
     </PackageReference>
