@@ -2,6 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/perfilLayuot"
     android:minWidth="25px"
     android:minHeight="25px">
     <include
@@ -100,6 +101,20 @@
                 android:singleLine="true"
                 android:id="@+id/txtLocationUser" />
         </android.support.design.widget.TextInputLayout>
+        <TextView
+            android:text="Genero favorito"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView1"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp" />
+        <Spinner
+            android:layout_width="162.0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/spnGenero"
+            android:spinnerMode="dialog"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp" />
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
@@ -124,10 +139,5 @@
                 android:id="@+id/btnCancelar"
                 android:textColor="@android:color/background_light" />
         </LinearLayout>
-        <TextView
-            android:text="Text"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/textView1" />
     </LinearLayout>
 </RelativeLayout>

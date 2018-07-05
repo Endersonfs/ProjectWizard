@@ -124,7 +124,7 @@ namespace ProjectoFinal
                 Snackbar snackBar = Snackbar.Make(signupLayout, "Register Success", Snackbar.LengthShort);
                 snackBar.Show();
                 var uid = auth.CurrentUser.Uid;
-                writeNewUser(uid, "", "", "", inputEmail.Text);
+                writeNewUser(uid, "", "", "", inputEmail.Text,"");
                 inputEmail.Text = "";
                 inputPassword.Text = "";
             }
@@ -136,11 +136,11 @@ namespace ProjectoFinal
             }
         }
 
-        private async void writeNewUser(string userId, string firstname, string lastname, string location, string email)
+        private async void writeNewUser(string userId, string firstname, string lastname, string location, string email, string genero)
         {
             mDatabse = FirebaseDatabase.GetInstance(FirebaseURL).GetReference("projectofinal-32957");
 
-            usuario = new Usuario(userId, firstname, lastname, location, email);
+            usuario = new Usuario(userId, firstname, lastname, location, email, genero);
 
             //esto funciona
             //var resp = mDatabse.Child("test");
@@ -148,17 +148,20 @@ namespace ProjectoFinal
             var resp = mDatabse.Child("Usuario/" + usuario.uid);
             await resp.SetValueAsync(usuario.uid);
 
-            var resp3 = mDatabse.Child($"Usuario/{usuario.uid}/FirstName");
-            await resp3.SetValueAsync(usuario.firstname);
+            resp = mDatabse.Child($"Usuario/{usuario.uid}/FirstName");
+            await resp.SetValueAsync(usuario.firstname);
 
-            var resp4 = mDatabse.Child($"Usuario/{usuario.uid}/LastName");
-            await resp4.SetValueAsync(usuario.lastname);
+            resp = mDatabse.Child($"Usuario/{usuario.uid}/LastName");
+            await resp.SetValueAsync(usuario.lastname);
 
-            var resp5 = mDatabse.Child($"Usuario/{usuario.uid}/Location");
-            await resp5.SetValueAsync(usuario.location);
+            resp = mDatabse.Child($"Usuario/{usuario.uid}/Location");
+            await resp.SetValueAsync(usuario.location);
 
-            var resp2 = mDatabse.Child($"Usuario/{usuario.uid}/Email");
-            await resp2.SetValueAsync(usuario.email);
+            resp = mDatabse.Child($"Usuario/{usuario.uid}/Email");
+            await resp.SetValueAsync(usuario.email);
+
+            resp = mDatabse.Child($"Usuario/{usuario.uid}/Genero");
+            await resp.SetValueAsync(usuario.genero);
 
 
             //Deberia insertar esto
