@@ -2865,8 +2865,8 @@ namespace ProjectoFinal
 			// aapt resource value: 0x7f0b00e7
 			public const int action0 = 2131427559;
 			
-			// aapt resource value: 0x7f0b0105
-			public const int action_attach = 2131427589;
+			// aapt resource value: 0x7f0b0107
+			public const int action_attach = 2131427591;
 			
 			// aapt resource value: 0x7f0b0092
 			public const int action_bar = 2131427474;
@@ -2916,8 +2916,8 @@ namespace ProjectoFinal
 			// aapt resource value: 0x7f0b0072
 			public const int action_mode_close_button = 2131427442;
 			
-			// aapt resource value: 0x7f0b0104
-			public const int action_refresh = 2131427588;
+			// aapt resource value: 0x7f0b0106
+			public const int action_refresh = 2131427590;
 			
 			// aapt resource value: 0x7f0b00e6
 			public const int action_text = 2131427558;
@@ -2973,8 +2973,8 @@ namespace ProjectoFinal
 			// aapt resource value: 0x7f0b00e1
 			public const int bottom_navigation = 2131427553;
 			
-			// aapt resource value: 0x7f0b00f9
-			public const int btnCancelar = 2131427577;
+			// aapt resource value: 0x7f0b00fb
+			public const int btnCancelar = 2131427579;
 			
 			// aapt resource value: 0x7f0b00d9
 			public const int btnLogin = 2131427545;
@@ -2985,11 +2985,11 @@ namespace ProjectoFinal
 			// aapt resource value: 0x7f0b00da
 			public const int btnSignup = 2131427546;
 			
-			// aapt resource value: 0x7f0b0100
-			public const int btnSignupGoogle = 2131427584;
+			// aapt resource value: 0x7f0b0102
+			public const int btnSignupGoogle = 2131427586;
 			
-			// aapt resource value: 0x7f0b00f8
-			public const int btnUpdate = 2131427576;
+			// aapt resource value: 0x7f0b00fa
+			public const int btnUpdate = 2131427578;
 			
 			// aapt resource value: 0x7f0b00a2
 			public const int button1 = 2131427490;
@@ -3246,26 +3246,26 @@ namespace ProjectoFinal
 			// aapt resource value: 0x7f0b00bf
 			public const int map = 2131427519;
 			
-			// aapt resource value: 0x7f0b0103
-			public const int masked = 2131427587;
+			// aapt resource value: 0x7f0b0105
+			public const int masked = 2131427589;
 			
 			// aapt resource value: 0x7f0b00ea
 			public const int media_actions = 2131427562;
 			
-			// aapt resource value: 0x7f0b0107
-			public const int menu_add_location = 2131427591;
-			
-			// aapt resource value: 0x7f0b0106
-			public const int menu_home = 2131427590;
+			// aapt resource value: 0x7f0b0109
+			public const int menu_add_location = 2131427593;
 			
 			// aapt resource value: 0x7f0b0108
-			public const int menu_message = 2131427592;
+			public const int menu_home = 2131427592;
 			
-			// aapt resource value: 0x7f0b0109
-			public const int menu_settings = 2131427593;
+			// aapt resource value: 0x7f0b010a
+			public const int menu_message = 2131427594;
 			
-			// aapt resource value: 0x7f0b0101
-			public const int message = 2131427585;
+			// aapt resource value: 0x7f0b010b
+			public const int menu_settings = 2131427595;
+			
+			// aapt resource value: 0x7f0b0103
+			public const int message = 2131427587;
 			
 			// aapt resource value: 0x7f0b003c
 			public const int middle = 2131427388;
@@ -3276,20 +3276,20 @@ namespace ProjectoFinal
 			// aapt resource value: 0x7f0b0033
 			public const int multiply = 2131427379;
 			
-			// aapt resource value: 0x7f0b010d
-			public const int nav_Ayuda = 2131427597;
-			
-			// aapt resource value: 0x7f0b010c
-			public const int nav_configuracion = 2131427596;
-			
-			// aapt resource value: 0x7f0b010b
-			public const int nav_libros = 2131427595;
+			// aapt resource value: 0x7f0b010f
+			public const int nav_Ayuda = 2131427599;
 			
 			// aapt resource value: 0x7f0b010e
-			public const int nav_logout = 2131427598;
+			public const int nav_configuracion = 2131427598;
 			
-			// aapt resource value: 0x7f0b010a
-			public const int nav_perfil = 2131427594;
+			// aapt resource value: 0x7f0b010d
+			public const int nav_libros = 2131427597;
+			
+			// aapt resource value: 0x7f0b0110
+			public const int nav_logout = 2131427600;
+			
+			// aapt resource value: 0x7f0b010c
+			public const int nav_perfil = 2131427596;
 			
 			// aapt resource value: 0x7f0b00e2
 			public const int nav_view = 2131427554;
@@ -3351,8 +3351,8 @@ namespace ProjectoFinal
 			// aapt resource value: 0x7f0b008b
 			public const int radio = 2131427467;
 			
-			// aapt resource value: 0x7f0b00fa
-			public const int registerLayout = 2131427578;
+			// aapt resource value: 0x7f0b00fc
+			public const int registerLayout = 2131427580;
 			
 			// aapt resource value: 0x7f0b0054
 			public const int right = 2131427412;
@@ -3597,23 +3597,29 @@ namespace ProjectoFinal
 			// aapt resource value: 0x7f0b00bc
 			public const int txtEmailForgot = 2131427516;
 			
-			// aapt resource value: 0x7f0b00fb
-			public const int txtEmailRegister = 2131427579;
+			// aapt resource value: 0x7f0b00fd
+			public const int txtEmailRegister = 2131427581;
+			
+			// aapt resource value: 0x7f0b00f7
+			public const int txtFirstName = 2131427575;
 			
 			// aapt resource value: 0x7f0b00db
 			public const int txtForgotPasswordLogin = 2131427547;
 			
-			// aapt resource value: 0x7f0b00f7
-			public const int txtFullname = 2131427575;
+			// aapt resource value: 0x7f0b00fe
+			public const int txtHaveAccount = 2131427582;
 			
-			// aapt resource value: 0x7f0b00fc
-			public const int txtHaveAccount = 2131427580;
+			// aapt resource value: 0x7f0b00f8
+			public const int txtLastname = 2131427576;
+			
+			// aapt resource value: 0x7f0b00f9
+			public const int txtLocationUser = 2131427577;
 			
 			// aapt resource value: 0x7f0b00d7
 			public const int txtPassword = 2131427543;
 			
-			// aapt resource value: 0x7f0b00fd
-			public const int txtPasswordRegister = 2131427581;
+			// aapt resource value: 0x7f0b00ff
+			public const int txtPasswordRegister = 2131427583;
 			
 			// aapt resource value: 0x7f0b0038
 			public const int uniform = 2131427384;
@@ -3624,17 +3630,17 @@ namespace ProjectoFinal
 			// aapt resource value: 0x7f0b0031
 			public const int useLogo = 2131427377;
 			
-			// aapt resource value: 0x7f0b00fe
-			public const int view1 = 2131427582;
+			// aapt resource value: 0x7f0b0100
+			public const int view1 = 2131427584;
 			
-			// aapt resource value: 0x7f0b00ff
-			public const int view2 = 2131427583;
+			// aapt resource value: 0x7f0b0101
+			public const int view2 = 2131427585;
 			
 			// aapt resource value: 0x7f0b0016
 			public const int view_offset_helper = 2131427350;
 			
-			// aapt resource value: 0x7f0b0102
-			public const int visible = 2131427586;
+			// aapt resource value: 0x7f0b0104
+			public const int visible = 2131427588;
 			
 			// aapt resource value: 0x7f0b0026
 			public const int wide = 2131427366;

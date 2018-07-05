@@ -16,20 +16,29 @@ namespace ProjectoFinal.Models
     public class Usuario
     {
         public string uid { get; set; }
-        public string name { get; set; }
+        public string firstname { get; set; }
+        public string lastname { get; set; }
+        public string location { get; set; }
         public string email { get; set; }
 
-        public  Usuario(string uid, string name, string email)
+        public Usuario()
         {
-            this.name = name;
+        }
+
+
+        public Usuario(string uid, string firstname, string lastname, string location, string email)
+        {
+            this.firstname = firstname;
+            this.lastname = lastname;
             this.email = email;
+            this.location = location;
             this.uid = uid;
         }
 
 
-        public string getname()
+        public string getfistname()
         {
-            return name;
+            return firstname;
         }
 
         public string getemail()

@@ -8,6 +8,7 @@ using Android.Widget;
 using Android.Support.V7.Widget;
 using Android.Support.V4.Widget;
 using System;
+using System.Threading.Tasks;
 using Android.Content;
 using Firebase.Auth;
 using Android.Gms.Tasks;
@@ -55,7 +56,7 @@ namespace ProjectoFinal
             
 #pragma warning restore CS0618 // El tipo o el miembro están obsoletos
             drawerToggle.SyncState();
-            
+
         }
 
         private void NavigationView_NavigationItemSelected(object sender, NavigationView.NavigationItemSelectedEventArgs e)

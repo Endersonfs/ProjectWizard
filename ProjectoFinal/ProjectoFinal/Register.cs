@@ -13,6 +13,8 @@ using Android.Support.V7.App;
 using Android.Views;
 using Android.Widget;
 using Firebase.Auth;
+using Firebase.Database;
+using ProjectoFinal.Models;
 using static Android.Views.View;
 
 namespace ProjectoFinal
@@ -29,7 +31,11 @@ namespace ProjectoFinal
         ProgressDialog process;
 #pragma warning restore CS0618 // El tipo o el miembro están obsoletos
 
+        private Usuario usuario;
         FirebaseAuth auth;
+
+        private DatabaseReference mDatabse;
+        private const string FirebaseURL = "https://projectofinal-32957.firebaseio.com/";
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -111,11 +117,14 @@ namespace ProjectoFinal
 
         public void OnComplete(Task task)
         {
-            if(task.IsSuccessful == true)
+            
+            if (task.IsSuccessful == true)
             {
                 if (process.IsShowing) { process.Dismiss(); }
                 Snackbar snackBar = Snackbar.Make(signupLayout, "Register Success", Snackbar.LengthShort);
                 snackBar.Show();
+                var uid = auth.CurrentUser.Uid;
+                writeNewUser(uid, "", "", "", inputEmail.Text);
                 inputEmail.Text = "";
                 inputPassword.Text = "";
             }
@@ -125,6 +134,35 @@ namespace ProjectoFinal
                 Snackbar snackBar = Snackbar.Make(signupLayout, "Register failed", Snackbar.LengthShort);
                 snackBar.Show();
             }
+        }
+
+        private async void writeNewUser(string userId, string firstname, string lastname, string location, string email)
+        {
+            mDatabse = FirebaseDatabase.GetInstance(FirebaseURL).GetReference("projectofinal-32957");
+
+            usuario = new Usuario(userId, firstname, lastname, location, email);
+
+            //esto funciona
+            //var resp = mDatabse.Child("test");
+            //await resp.SetValueAsync("juan");
+            var resp = mDatabse.Child("Usuario/" + usuario.uid);
+            await resp.SetValueAsync(usuario.uid);
+
+            var resp3 = mDatabse.Child($"Usuario/{usuario.uid}/FirstName");
+            await resp3.SetValueAsync(usuario.firstname);
+
+            var resp4 = mDatabse.Child($"Usuario/{usuario.uid}/LastName");
+            await resp4.SetValueAsync(usuario.lastname);
+
+            var resp5 = mDatabse.Child($"Usuario/{usuario.uid}/Location");
+            await resp5.SetValueAsync(usuario.location);
+
+            var resp2 = mDatabse.Child($"Usuario/{usuario.uid}/Email");
+            await resp2.SetValueAsync(usuario.email);
+
+
+            //Deberia insertar esto
+            //mDatabse.Child("Usuario").Child(userId).SetValue(usuario);
         }
     }
 }
